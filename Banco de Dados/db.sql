@@ -86,9 +86,25 @@ AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8mb3;*/
 
 
+-- -----------------------------------------------------
+-- Table `db_login`.`produto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `db_login`.`usuario` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `senha` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+insert into usuario(nome, email, senha) values ('Joao','joao@gmail.com',sha1('123'));
 
 /*insert into categoria_produto (categoria) values ('Limpeza'),('Hortifruti'),('Açougue'),('Padaria'),
 ('Frios'),('Bebidas'),('Peixes'),('Higiene'),('Enlatados'),('Mercearia');*/

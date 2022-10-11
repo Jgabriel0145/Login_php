@@ -10,21 +10,21 @@ switch ($url)
     
     case '/pessoa':
         PessoaController::index();
-        break;
+    break;
 
     case '/pessoa/form':
         PessoaController::form();
-        break;
+    break;
 
     case '/pessoa/form/save':
         PessoaController::save();
-        break;
+    break;
 
     case '/pessoa/delete':
         PessoaController::delete();
-        break;
+    break;
 
     default:
         header('Location: /pessoa');
-        break;
+    break;
 }

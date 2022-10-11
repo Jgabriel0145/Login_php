@@ -9,7 +9,7 @@ class LoginController extends Controller
 {
     public static function index()
     {
-        parent::render('Login/FormLogin');
+        parent::render('Auth/FormLogin');
     }
 
     public static function auth()

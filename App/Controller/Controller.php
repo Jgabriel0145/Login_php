@@ -17,4 +17,10 @@ abstract class Controller
             exit('Arquivo da View não encontrado. Arquivo: ' . $view);
     }
 
+    protected static function isAuthenticated()
+    {
+        if (!isset($_SESSION['usuario_logado']))
+            header('Location: /login');
+    }
+
 }

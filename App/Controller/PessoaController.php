@@ -9,7 +9,7 @@ class PessoaController extends Controller
 {
     public static function index()
     {
-        //parent::isAuthenticated();
+        parent::isAuthenticated();
 
         $model = new PessoaModel();
         $model->getAllRows();
@@ -20,7 +20,7 @@ class PessoaController extends Controller
 
     public static function form()
     {
-        //parent::isAuthenticated();
+        parent::isAuthenticated();
 
         $model = new PessoaModel();
 
@@ -32,7 +32,7 @@ class PessoaController extends Controller
 
     public static function save()
     {
-        //parent::isAuthenticated();
+        parent::isAuthenticated();
 
         $model = new PessoaModel();
 
@@ -52,7 +52,7 @@ class PessoaController extends Controller
 
     public static function delete()
     {
-        //parent::isAuthenticated();
+        parent::isAuthenticated();
         
         $model = new PessoaModel();
 

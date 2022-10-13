@@ -17,7 +17,7 @@ switch ($url)
         LoginController::auth();
     break;
 
-    case '/login/logout';
+    case '/logout';
         LoginController::logout();
     break;
 

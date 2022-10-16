@@ -17,6 +17,14 @@ switch ($url)
         LoginController::auth();
     break;
 
+    case '/login/cadastro':
+        LoginController::form_cadastro();
+    break;
+
+    case '/login/cadastro/save':
+        LoginController::save();
+    break;
+
     case '/logout';
         LoginController::logout();
     break;

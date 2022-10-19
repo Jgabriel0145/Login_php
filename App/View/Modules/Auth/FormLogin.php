@@ -35,14 +35,60 @@
     
 </form>
 
+
+
+
 <br>
-<button onclick="document.location='/login/cadastro'" class="btn btn-primary">Cadastre-se</button>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Cadastre-se
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
+            </div>
+      
+            <div class="modal-body">
+      
+      
+      
+      
+                <form action="/login/cadastro/save" method="post">  
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Nome:</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="nome_cadastro" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email_cadastro" placeholder="usuario@gmail.com" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="senha_cadastro" placeholder="********" required>
+                    </div>
+
+                
 
 
 
 
+            </div>
+      
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
 
-
+            </form>
+        </div>
+    </div>
+</div>
 
 
 

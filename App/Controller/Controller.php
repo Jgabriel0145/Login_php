@@ -19,9 +19,11 @@ abstract class Controller
 
     protected static function isAuthenticated()
     {
-        if (!isset($_SESSION['usuario_logado']))
-            header('Location: /login');
-        
+        if (isset($_SESSION['lembrar']))
+            header('Location: /');
+        else
+            if (!isset($_SESSION['usuario_logado']))
+                header('Location: /login');
     }
 
 }

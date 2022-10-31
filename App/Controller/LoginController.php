@@ -59,5 +59,15 @@ class LoginController extends Controller
         header('Location: /login');
     }
 
+    public static function AlterarDados()
+    {
+        $model = new LoginModel();
+
+        $model->email_alterar = $_POST['email_alterar'];
+        $model->senha_atual = $_POST['senha_atual'];
+        $model->senha_alterar = $_POST['senha_alterar'];
+
+    }
+
 
 }

@@ -27,9 +27,22 @@
     </div>
     
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password:</label>
+        <label for="exampleInputPassword1" class="form-label">Senha:</label>
         <input type="password" class="form-control" id="exampleInputPassword1" name="senha_login" placeholder="********" required>
     </div>
+
+    <div class="mb-3">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Lembrar Login
+            </label>
+        </div>
+
+        
+        <a href="" style="color: rgb(0, 0, 255);">Esqueci a senha</a>
+    </div>
+
 
     <button type="submit" class="btn btn-primary">Logar</button>
     
@@ -37,7 +50,7 @@
 
 
 
-
+<!--FormCadastro-->
 <br>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -73,11 +86,6 @@
                         <input type="password" class="form-control" id="exampleInputPassword1" name="senha_cadastro" placeholder="********" required>
                     </div>
 
-                
-
-
-
-
             </div>
       
             <div class="modal-footer">
@@ -89,15 +97,7 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
+<!--FormCadastro-->
 
 
 

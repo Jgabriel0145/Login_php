@@ -10,6 +10,7 @@ class LoginModel extends Model
 
     public $id, $nome, $email, $senha;
     public $nome_cadastro, $email_cadastro, $senha_cadastro;
+    public $senha_atual, $senha_alterar, $email_alterar;
 
     public function autenticar()
     {

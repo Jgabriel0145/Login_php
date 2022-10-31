@@ -1,8 +1,8 @@
 -- Criando user
-create user 'joao'@'localhost' identified by '123';
+/*create user 'joao'@'localhost' identified by '123';
 grant all privileges on db_login.* to 'joao'@'localhost';
 flush privileges;
-
+*/
 
 -- MySQL Workbench Forward Engineering
 
@@ -37,9 +37,7 @@ CREATE TABLE IF NOT EXISTS `db_login`.`pessoa` (
   UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) VISIBLE,
   UNIQUE INDEX `rg_UNIQUE` (`rg` ASC) VISIBLE,
   UNIQUE INDEX `telefone_UNIQUE` (`telefone` ASC) VISIBLE)
-ENGINE = InnoDBauth_user
-AUTO_INCREMENT = 6
-DEFAULT CHARACTER SET = utf8mb3;
+ENGINE = InnoDB;
 
 
 CREATE TABLE IF NOT EXISTS `db_login`.`usuario` (
@@ -48,9 +46,7 @@ CREATE TABLE IF NOT EXISTS `db_login`.`usuario` (
   `email` VARCHAR(100) NOT NULL,
   `senha` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

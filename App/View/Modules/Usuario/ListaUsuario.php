@@ -10,7 +10,7 @@
 
         <?php include 'css/bootstrap_personalizado.php';?>
 
-        <title>Lista Pessoas</title>
+        <title>Lista Usuários</title>
 
         <style>
 
@@ -46,51 +46,25 @@
                 <th>#</th>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>RG</th>
-                <th>CPF</th>
-                <th>Data de Nascimento</th>
                 <th>Email</th>
-                <th>Telefone</th>
-                <th>Endereço</th>
 
             <tbody>
                 <?php foreach($model->rows as $item): ?>
 
                 <tr>
                     <td>
-                        <a href="/pessoa/delete?id=<?= $item->id ?>" class="botao_excluir">X</a>
+                        <a href="/usuario/delete?id=<?= $item->id ?>" class="botao_excluir">X</a>
                     </td>
 
                     <td><a><?= $item->id ?></a></td>
 
                     <td>
-                        <a href="/pessoa/form?id=<?= $item->id ?>"><?= $item->nome ?></a>
+                        <a href="/usuario/form?id=<?= $item->id ?>"><?= $item->nome ?></a>
                     </td>
 
                     <td>
-                        <a href="/pessoa/form?id=<?= $item->id ?>"><?= $item->rg ?></a>
+                        <a href="/usuario/form?id=<?= $item->id ?>"><?= $item->email ?></a>
                     </td>
-
-                    <td>
-                        <a href="/pessoa/form?id=<?= $item->id ?>"><?= $item->cpf ?></a>
-                    </td>
-
-                    <td>
-                        <a href="/pessoa/form?id=<?= $item->id ?>"><?= $item->data_nascimento ?></a>
-                    </td>
-
-                    <td>
-                        <a href="/pessoa/form?id=<?= $item->id ?>"><?= $item->email ?></a>
-                    </td>
-
-                    <td>
-                        <a href="/pessoa/form?id=<?= $item->id ?>"><?= $item->telefone ?></a>
-                    </td>
-
-                    <td>
-                        <a href="/pessoa/form?id=<?= $item->id ?>"><?= $item->endereco ?></a>
-                    </td>
-
                 </tr>
 
                 <?php endforeach ?>
@@ -107,7 +81,7 @@
             </tbody>
         </table>
         
-        <button onclick="document.location='/pessoa/form'" class="btn btn-personalizado" style="margin-left: 0.5%;">Cadastrar</button>
+        <button onclick="document.location='/usuario/form'" class="btn btn-personalizado" style="margin-left: 0.5%;">Cadastrar</button>
         <button onclick="document.location='/'" class="btn btn-personalizado" style="margin-left: 0.5%;">Voltar</button>
 
 

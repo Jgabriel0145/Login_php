@@ -9,7 +9,7 @@ abstract class Controller
     {
         
         $arquivo_view = VIEWS . $view . '.php';
-        //var_dump($arquivo_view);
+        //var_dump($arquivo_view); exit;
 
         if(file_exists($arquivo_view))
             include $arquivo_view;
@@ -19,11 +19,8 @@ abstract class Controller
 
     protected static function isAuthenticated()
     {
-        if (isset($_SESSION['lembrar']))
-            header('Location: /');
-        else
-            if (!isset($_SESSION['usuario_logado']))
-                header('Location: /login');
+        if (!isset($_SESSION['usuario_logado']))
+            header('Location: /login');
     }
 
 }
